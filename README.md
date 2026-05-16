@@ -105,8 +105,30 @@ JOIN Dim_Services s
 ON h.ServiceID = s.ServiceID
 GROUP BY s.ServiceName;
 ```
+## Analytics
 
+
+```sql
+-- Total Revenue
+
+SELECT SUM(TotalAmount) AS TotalRevenue
+FROM Fact_Bookings;
+
+-- Average Rating
+SELECT AVG(Rating) AS AvgRating
+FROM Fact_Reviews;
+
+-- Most Used Services
+SELECT 
+    s.ServiceName,
+    SUM(h.Quantity) AS TotalUsage
+FROM Fact_HotelServices h
+JOIN Dim_Services s
+ON h.ServiceID = s.ServiceID
+GROUP BY s.ServiceName;
 ---
+
+```
 
 # ERD Diagram
 ![ERD](ERD.png)
