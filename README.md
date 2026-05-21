@@ -66,7 +66,7 @@ The project demonstrates Data Warehousing concepts, relational database design, 
 
 ---
 
-# Example Business Questions
+# Example Bussiness Questions
 
 This warehouse can help answer questions such as:
 
